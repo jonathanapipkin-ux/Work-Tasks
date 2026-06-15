@@ -280,14 +280,15 @@ import { getDatabase, ref, set, remove, onValue }
    PASTE YOUR WORK FIREBASE CONFIG HERE
    ================================================================ */
 const firebaseConfig = {
-  apiKey:            "PASTE_YOUR_API_KEY_HERE",
-  authDomain:        "PASTE_YOUR_AUTH_DOMAIN_HERE",
-  databaseURL:       "PASTE_YOUR_DATABASE_URL_HERE",
-  projectId:         "PASTE_YOUR_PROJECT_ID_HERE",
-  storageBucket:     "PASTE_YOUR_STORAGE_BUCKET_HERE",
-  messagingSenderId: "PASTE_YOUR_MESSAGING_SENDER_ID_HERE",
-  appId:             "PASTE_YOUR_APP_ID_HERE"
+  apiKey:            "AIzaSyCFQNO8tDcRXpwZid3eXIp-dQa2T92yRPc",
+  authDomain:        "work-tasks-c69b3.firebaseapp.com",
+  databaseURL:       "https://work-tasks-c69b3-default-rtdb.firebaseio.com",
+  projectId:         "work-tasks-c69b3",
+  storageBucket:     "work-tasks-c69b3.firebasestorage.app",
+  messagingSenderId: "148241479740",
+  appId:             "1:148241479740:web:0cb8d3d1a1751cb0ea2b39"
 };
+
 /* ================================================================ */
 
 const app = initializeApp(firebaseConfig);
