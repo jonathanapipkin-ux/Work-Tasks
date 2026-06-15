@@ -333,7 +333,26 @@ function deleteTask(id){
 
 // ---- Real-time listeners ----
 const dot = document.getElementById('syncDot');
+let configInitialized = false;
 
+onValue(dbRef('config'), snap => {
+  const val = snap.val();
+
+  if (!val && !configInitialized) {
+    configInitialized = true;
+    saveConfig();
+    render();
+    return;
+  }
+
+  if (val){
+    if (val.categories) data.categories = val.categories;
+    if (val.filter)     data.filter     = val.filter;
+    if (val.order)      data.order      = val.order;
+  }
+
+  render();
+});
 onValue(dbRef('config'), snap => {
   const val = snap.val();
   if (val){
